@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const helmet = require('helmet');
 const ninetyDaysInSeconds = 90 * 24 * 60 * 60
+const bcrypt = require('bcrypt');
 
 app.use(helmet.hidePoweredBy());
 app.use(helmet.frameguard({ action: 'deny' }));
